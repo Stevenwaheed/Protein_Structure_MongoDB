@@ -19,7 +19,7 @@ def data_upload(collection_name):
     collection = db.get_collection(collection_name)
     
     lst = []
-    for record in collection.find():
+    for record in collection.find().limit(1000):
         lst.append(record)
     
     df = pd.DataFrame(lst)
@@ -76,7 +76,7 @@ def show(df):
     gd.configure_selection(selection_mode='single', use_checkbox=True)
     grid_options = gd.build()
 
-    grid_table = AgGrid(new_data.iloc[:1000, :], gridOptions=grid_options, height=500)
+    grid_table = AgGrid(new_data, gridOptions=grid_options, height=500)
     
     values = list(grid_table['selected_rows'][0].values())[1:]
     keys = list(grid_table['selected_rows'][0].keys())[1:]
