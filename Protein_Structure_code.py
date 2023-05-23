@@ -76,7 +76,7 @@ def show(df):
     gd.configure_selection(selection_mode='single', use_checkbox=True)
     grid_options = gd.build()
 
-    grid_table = AgGrid(new_data.iloc[:2000, :], gridOptions=grid_options, height=500)
+    grid_table = AgGrid(new_data.iloc[:1000, :], gridOptions=grid_options, height=500)
     
     values = list(grid_table['selected_rows'][0].values())[1:]
     keys = list(grid_table['selected_rows'][0].keys())[1:]
