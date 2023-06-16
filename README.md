@@ -2,7 +2,7 @@
 
 <p id="description">This project helps user to add delete and update protein structures and sequences and make queries. We provide this project with a dataset for PDB so it becomes more easy for the users to know the types of data that they deal with. We create a website using streamlit to make it easy for our users to perform their queries and upload the dataset on cloud so they don't need to download any programs to use our website.
 
-You will find the website link at the end of this readme file. 
+You will find the website link at the end of this README file. 
 </p>
 
 <h2>Dataset Description</h2>
